@@ -1,0 +1,305 @@
+/* Common Styles */
+
+html {
+    font-size: 6.25%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16rem;
+    margin: 100px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    margin: 0;
+    line-height: 130%;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-size: 40rem;
+}
+
+h3 {
+    font-size: 24rem;
+}
+
+p {
+    line-height: 150%;
+}
+
+.small {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+    letter-spacing: 2rem;
+}
+
+section {
+    padding-top: 50px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+section:first-child {
+    padding-top: 0;
+}
+
+section:last-child {
+    border-bottom: 0;
+}
+
+/* section 1 */
+
+.flex-header {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.flex-header ul {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-header li {
+    float: left;
+    list-style: none;
+    margin: 3px;
+}
+
+.flex-header li a {
+    border-radius: 3px;
+    display: block;
+    padding: 2px;
+}
+
+.flex-header li a:hover {
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.flex-header span {
+    background-image: url("images/socialmedia.jpg");
+    background-repeat: no-repeat;
+    color: transparent;
+    display: block;
+    height: 25px;
+    width: 25px;
+}
+
+.twitter {
+    background-position: 0 0;
+}
+
+.insta {
+    background-position: -25px 0;
+}
+
+.facebook {
+    background-position: -50px 0;
+}
+
+.linkedin {
+    background-position: -75px 0;
+}
+
+.flex-images {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 100%;
+}
+
+.flex-images a {
+    flex-basis: 32%;
+    margin-bottom: 3%;
+}
+
+.flex-image {
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.flex-image img {
+    border-radius: 2%;
+}
+
+.center {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.arrow {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    transform: rotate(45deg);
+    position: relative;
+    top: -3px;
+    left: 2px;
+}
+
+/* --- */
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fc2-i, .fc3-i, .fc4-i {
+    flex: 0 0 40%;
+}
+
+.read {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* section 2 */
+
+.work {
+    margin: 30px 0 40px;;
+}
+
+/* section 3 */
+
+.steps {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 16px;
+}
+
+.steps p {
+    padding: 16px 0;
+}
+
+.step {
+    position: relative;
+    top: -6px;
+}
+
+.step::before {
+    content: " ";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -19px;
+    top: 24px;
+}
+
+.step:nth-child(3n+1)::before {
+    width: 11px;
+    height: 11px;
+    left: -22px;
+    top: 10px
+}
+
+.step:first-of-type::after {
+    height: 10px;
+    background-color: white;
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 3px;
+    left: -18px;
+    top: 0;
+}
+
+.step:last-of-type::after {
+    height: 100%;
+    background-color: white;
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 3px;
+    left: -18px;
+    top: 30px;
+}
+
+#colortext {
+    background: linear-gradient(to bottom right, #00b1ff 0%, #d600ff 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+/* section 4 */
+
+.address {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 25px;
+}
+
+.flex-profile {
+    display: flex;
+    align-items: center;
+}
+
+.flex-profile img {
+    transition: transform linear .5s;
+}
+
+.flex-profile img:hover {
+    transform: scale(1.5);
+}
+
+.flex-profile h3 {
+    padding-left: 20px;
+}
+
+/* Responsive */
+
+@media all and (max-width: 1200px) {
+
+    body {
+        margin: 50px;
+    }
+
+    h1, h2, h3 {
+        font-weight: 300;
+    }
+
+    .flex-images a {
+        flex-basis: 48%;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex > div:last-of-type {
+        margin-top: 30px;
+    }
+
+    .fc2 > div:last-of-type {
+        margin-top: 0;
+    }
+    
+}
+
+@media all and (max-width: 600px) {
+
+    body {
+        margin: 30px;
+    }
+
+    .flex-header {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    
+    .flex-images a {
+        flex-basis: 100%;
+    }
+    
+}
+
