@@ -42,11 +42,11 @@ section {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-section:first-child {
+section:first-of-type {
     padding-top: 0;
 }
 
-section:last-child {
+section:last-of-type {
     border-bottom: 0;
 }
 
